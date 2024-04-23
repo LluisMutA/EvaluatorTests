@@ -7,7 +7,7 @@
     <list default="true" id="30e6071c-6a3e-4a4b-a9e2-dc2aff41f90b" name="Changes" comment="1st Commit">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Evaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Evaluator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +23,12 @@
     &quot;assignee&quot;: &quot;LluisMutA&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LluisMutA/EvaluatorTests.git",
-    "accountId": "68e15c34-2d93-4d51-985a-9437b5793f2d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LluisMutA/EvaluatorTests.git&quot;,
+    &quot;accountId&quot;: &quot;26290cc0-51e5-4340-b950-4c770628f94c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -41,8 +41,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.TokenTest.executor": "Debug",
-    "JUnit.TokenTest.tests.executor": "Debug",
+    "JUnit.EvaluatorTest.executor": "Run",
+    "JUnit.EvaluatorTest.tests_rpn.executor": "Run",
+    "JUnit.TokenTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -52,12 +53,32 @@
     "onboarding.tips.debug.path": "/home/superior/IdeaProjects/Tercer Trismestre/Evaluator/src/Main.java"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="TokenTest.tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.EvaluatorTest.tests_n_operands">
+    <configuration name="EvaluatorTest.tests_2_operands" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Evaluator" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TokenTest" />
-      <option name="METHOD_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="EvaluatorTest" />
+      <option name="METHOD_NAME" value="tests_2_operands" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EvaluatorTest.tests_n_operands" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Evaluator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EvaluatorTest" />
+      <option name="METHOD_NAME" value="tests_n_operands" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EvaluatorTest.tests_rpn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Evaluator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EvaluatorTest" />
+      <option name="METHOD_NAME" value="tests_rpn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -65,7 +86,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TokenTest.tests" />
+        <item itemvalue="JUnit.EvaluatorTest.tests_n_operands" />
+        <item itemvalue="JUnit.EvaluatorTest.tests_2_operands" />
+        <item itemvalue="JUnit.EvaluatorTest.tests_rpn" />
       </list>
     </recent_temporary>
   </component>
@@ -92,20 +115,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="1st Commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/TokenTest.java</url>
-          <line>6</line>
-          <properties class="TokenTest" method="tests">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
