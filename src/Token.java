@@ -49,7 +49,7 @@ public class Token {
 
     // Torna un token de tipus "OP"
     static Token tokOp(char c) {
-        return new Token(Toktype.OP, 0, c);
+        return new Token(Toktype.OP,0, c);
     }
 
     // Torna un token de tipus "PAREN"
@@ -76,30 +76,30 @@ public class Token {
 
     // A partir d'un String, torna una llista de tokens
     public static Token[] getTokens(String expr) {
-        List<Token> tokens = new ArrayList<>();
-        StringBuilder consNum = new StringBuilder(); // enmagatzema el digits
+        List<Token> llistaTokens = new ArrayList<>(); // enmagatzema el que no son numeros
+        StringBuilder consNum = new StringBuilder(); // enmagatzema caracters en valor decimal (49 = 1, 51 = 3...)
 
-        for (char c : expr.toCharArray()) {
+        for (char c : expr.toCharArray()) { // Bucle per cada char del String
             if (Character.isDigit(c)) {  // isDigit, fa aixo, mira si es u digit
-                consNum.append(c);
+                consNum.append(c);       // aqui l'afegim al consNum
             } else {
-                if (!consNum.isEmpty()) {
-                    int number = Integer.parseInt(consNum.toString());
-                    tokens.add(tokNumber(number));
+                if (consNum.length() > 0) {   // Es comprova quin numero es el que ve i el guarda al StringBuilder quan torba un valor no numeric "+/()-*"
+                    int num = Integer.parseInt(consNum.toString());
+                    llistaTokens.add(tokNumber(num));
                     consNum.setLength(0);
                 }
-                if (c == '+' || c == '-' || c == '*' || c == '/') {
-                    tokens.add(tokOp(c));
+                if (c == '+' || c == '-' || c == '*' || c == '/') {  // Comprovam quin caracter es, un operador o un parentesis, cridam al seu token i afegim a la llista
+                    llistaTokens.add(tokOp(c));
                 } else if (c == '(' || c == ')') {
-                    tokens.add(tokParen(c));
+                    llistaTokens.add(tokParen(c));
                 }
             }
         }
         // Afegir darrer numero si no es parentesis o +*-/
-        if (consNum.isEmpty()) {
+        if (consNum.length() > 0) {
             int number = Integer.parseInt(consNum.toString());
-            tokens.add(tokNumber(number));
+            llistaTokens.add(tokNumber(number));
         }
-        return tokens.toArray(new Token[0]);
+        return llistaTokens.toArray(new Token[0]);
     }
 }
