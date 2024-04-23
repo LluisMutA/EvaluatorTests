@@ -19,13 +19,23 @@ public class Evaluator {
              if(token.getTtype() == Token.Toktype.NUMBER){
                  transformaRPN.add(token);
              }else if (token.getTtype() == Token.Toktype.OP) {
-                        if((!pilaRPN.isEmpty()) && (prioritat(pilaRPN.peek()) >= prioritat(token))){ //compr mentre
+                        while((!pilaRPN.isEmpty()) && (prioritat(pilaRPN.peek()) >= prioritat(token))){
                             transformaRPN.add(pilaRPN.pop());
                         }
                         pilaRPN.push(token);
+                 }else if (token.getTtype() == Token.Toktype.PAREN) {
+                 if (token.getTk() == '(') {
+                     pilaRPN.push(token);
+                 }else if (token.getTk() == ')') {
+                     while (!pilaRPN.isEmpty() && pilaRPN.peek().getTk() != '(') {
+                         transformaRPN.add(pilaRPN.pop());
+                     }
                  }
-             }
-        return RPN;
+             }while (!pilaRPN.isEmpty()) {
+                 transformaRPN.add(pilaRPN.pop());
+            }
+         }
+        return transformaRPN.toArray(new Token[0]);
     }
 
     public static int prioritat(Token otk){

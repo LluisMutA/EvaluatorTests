@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30e6071c-6a3e-4a4b-a9e2-dc2aff41f90b" name="Changes" comment="1st Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="30e6071c-6a3e-4a4b-a9e2-dc2aff41f90b" name="Changes" comment="EvaluatorTest 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Evaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Evaluator.java" afterDir="false" />
     </list>
@@ -42,6 +41,9 @@
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.EvaluatorTest.executor": "Run",
+    "JUnit.EvaluatorTest.tests_2_operands.executor": "Run",
+    "JUnit.EvaluatorTest.tests_n_operands.executor": "Run",
+    "JUnit.EvaluatorTest.tests_opUnari.executor": "Run",
     "JUnit.EvaluatorTest.tests_rpn.executor": "Run",
     "JUnit.TokenTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -53,7 +55,7 @@
     "onboarding.tips.debug.path": "/home/superior/IdeaProjects/Tercer Trismestre/Evaluator/src/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.EvaluatorTest.tests_n_operands">
+  <component name="RunManager" selected="JUnit.EvaluatorTest.tests_sumes_restes_combinades">
     <configuration name="EvaluatorTest.tests_2_operands" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Evaluator" />
       <option name="PACKAGE_NAME" value="" />
@@ -74,6 +76,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EvaluatorTest.tests_opUnari" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Evaluator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EvaluatorTest" />
+      <option name="METHOD_NAME" value="tests_opUnari" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EvaluatorTest.tests_rpn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Evaluator" />
       <option name="PACKAGE_NAME" value="" />
@@ -84,11 +96,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EvaluatorTest.tests_sumes_restes_combinades" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Evaluator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EvaluatorTest" />
+      <option name="METHOD_NAME" value="tests_sumes_restes_combinades" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EvaluatorTest.tests_sumes_restes_combinades" />
         <item itemvalue="JUnit.EvaluatorTest.tests_n_operands" />
         <item itemvalue="JUnit.EvaluatorTest.tests_2_operands" />
         <item itemvalue="JUnit.EvaluatorTest.tests_rpn" />
+        <item itemvalue="JUnit.EvaluatorTest.tests_opUnari" />
       </list>
     </recent_temporary>
   </component>
@@ -109,11 +133,20 @@
       <option name="project" value="LOCAL" />
       <updated>1713797711642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="EvaluatorTest 1">
+      <option name="closed" value="true" />
+      <created>1713882062010</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713882062010</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st Commit" />
+    <MESSAGE value="EvaluatorTest 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="EvaluatorTest 1" />
   </component>
 </project>
