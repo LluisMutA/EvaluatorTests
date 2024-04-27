@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Token {
     enum Toktype {
-        NUMBER, OP, PAREN
+        NUMBER, OP, PAREN, UNARI
     }
 
     public int getValue() {
@@ -35,6 +35,7 @@ public class Token {
     private int value;
     private char tk;
 
+
     // Constructor privat. Evita que es puguin construir objectes Token externament
     private Token(Toktype ttype, int value, char tk) {
         this.ttype = ttype;
@@ -55,6 +56,10 @@ public class Token {
     // Torna un token de tipus "PAREN"
     static Token tokParen(char c) {
         return new Token(Toktype.PAREN, 0, c);
+    }
+
+    static Token tokUnari () {
+        return new Token(Toktype.UNARI, 0, 'k');
     }
 
     // Mostra un token (conversió a String)
@@ -88,18 +93,32 @@ public class Token {
                     llistaTokens.add(tokNumber(num));
                     consNum.setLength(0);
                 }
+                if(esUnari(c, llistaTokens)){
+                    llistaTokens.add(tokUnari());
+                    continue;
+                }
                 if (c == '+' || c == '-' || c == '*' || c == '/') {  // Comprovam quin caracter es, un operador o un parentesis, cridam al seu token i afegim a la llista
                     llistaTokens.add(tokOp(c));
                 } else if (c == '(' || c == ')') {
                     llistaTokens.add(tokParen(c));
                 }
             }
-        }
-        // Afegir darrer numero si no es parentesis o +*-/
-        if (consNum.length() > 0) {
-            int number = Integer.parseInt(consNum.toString());
-            llistaTokens.add(tokNumber(number));
+       }
+       // Afegir darrer numero si no es parentesis o +*-/
+       if (consNum.length() > 0) {
+           int number = Integer.parseInt(consNum.toString());
+           llistaTokens.add(tokNumber(number));
         }
         return llistaTokens.toArray(new Token[0]);
     }
+
+    private static boolean esUnari(char c, List<Token> llistaTokens) {
+        // comprovar els - a l'inici
+        // despres de () i
+        // despres de cada operador.
+       // return (c == '-' && llistaTokens.isEmpty() || llistaTokens.getLast().getTtype() == Toktype.PAREN || llistaTokens.getLast().getTtype() == Toktype.OP);
+        return (c == '-' && (llistaTokens.isEmpty() || llistaTokens.get(llistaTokens.size() - 1).getTtype() == Toktype.PAREN || llistaTokens.get(llistaTokens.size() - 1).getTtype() == Toktype.OP));
+
+    }
 }
+
